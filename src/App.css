@@ -88,7 +88,7 @@ body {
   cursor: pointer;
   z-index: 3;
   /* border-color: #EB6864; */
-  box-shadow: 0 0 0 0.2rem rgba(233, 16, 16, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(233, 16, 16, 0.5);
 }
 
 .tableCard {

@@ -23,7 +23,7 @@ function Table() {
   const navigate = useNavigate();
 
   const [wordd, setWordd] = useState(col.word);
-  const [res, setRes] = useState(0.2670);
+  const [res, setRes] = useState(0);
 
   const [c1, setC1] = useState(0);
   const [c2, setC2] = useState(0);
@@ -47,25 +47,20 @@ function Table() {
     check8 ? (setC8(1)) : (setC8(0));
     check9 ? (setC9(1)) : (setC9(0));
 
-    const z =
-    -1.01 +
-     0.46 * c1 -
-     0.33 * c2 +
-     0.26 * c3 +
-     0.3 * c4 -
-     0.13 * c5 +
-     0.25 * c6 +
-     0.14 * c7 +
-     0.8 * c8 +
-     0.92 * c9;
+  }, [check1, check2, check3, check4, check5, check6, check7, check8, check9]);
 
-   const p = Math.exp(z) / (1 + Math.exp(z));
-   const num = (Number(p.toFixed(4)));
-   setRes(num);
 
-   res < 0.293 ?  setWordd('низкая') : setWordd('высокая');
-  }, [check1, check2, check3, check4, check5, check6, check7, check8, check9, res]);
+  useEffect( () => {
+    const z = -1.01+0.46*c1-0.33*c2+0.26*c3+0.3*c4-0.13*c5+0.25*c6+0.14*c7+0.8*c8+0.92*c9;                
+    const p = Math.exp(z) / (1 + Math.exp(z));
+    const num = (Number(p.toFixed(4)));
+    setRes(num);
+  }, [c1, c2, c3, c4, c5, c6, c7, c8, c9])
 
+  useEffect( () => {
+    res < 0.293 ?  setWordd('низкая') : setWordd('высокая');
+    console.log(res);
+  }, [res])
   
      function result() {
      const data = {c1, c2, c3, c4, c5, c6, c7, c8, c9, res, word: wordd}
