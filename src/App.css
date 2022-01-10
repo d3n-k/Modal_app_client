@@ -1,38 +1,165 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=News+Cycle:400,700");
+
+
+
+body {
+  padding: 2rem 0rem;
+  background-size: cover;
+  background-image: url(./pics/modal_back.png);
+}
+
+.title {
+  width: 70%;
+  margin-left: 15%;
+  padding: 0.5rem 1.5rem;
+    border: 0.125rem solid #EB6864;
+    color: #222;
+    background-color: white;
+    z-index: 3;
+    position: relative;
+}
+
+.h4 {
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-weight: 700 !important;
+  margin-bottom: 0 !important;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hr {
+  width: 100%;
+  height: 0.125rem;
+  background: #EB6864;
+  margin-top: -39px;
+  z-index: 1;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inst_title {
+  font-weight: bolder;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.links {
+  margin-top: 1rem;
+  display: inline-block;
+  margin-left: calc(50% - 273px/2);
 }
 
-.App-link {
-  color: #61dafb;
+.link a{
+  color: #EB6864;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link a:hover {
+  color: #EB6864;
+  text-decoration: underline;
+}
+
+.instr {
+  padding: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+.fullname {
+  color: #777 !important;
+  margin-bottom: 0.5rem !important;
+  margin-top: 0.5rem;
+
+}
+
+.descript {
+  font-style: italic;
+  font-size: 1rem;
+  color: #777;
+}
+
+.card {
+  min-height: 330px;
+  transition: transform .3s;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  z-index: 3;
+  /* border-color: #EB6864; */
+  box-shadow: 0 0 0 0.2rem rgba(233, 16, 16, 0.25);
+}
+
+.tableCard {
+  padding: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  background-color: #fff;
+  margin-top: 2rem;
+}
+
+.colR {
+  border: 1px solid#dee2e6;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.colR2 {
+  border: 1px solid#dee2e6;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #f5f3f3;
+}
+
+.colR2:hover {
+  background-color: #ebe9e9;
+}
+
+.divCol{
+  padding: 20px;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.colLink {
+  color: #e22620 !important;
+  font-weight: 700 !important;
+  border-color: #e22620 !important ;
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-size: 1rem;
+}
+
+.colLink:hover {
+  background-color: #e22620 !important;
+  color: white !important;
+}
+
+.colbut {
+  background-color: #ec4f49 !important;
+  font-weight: 700 !important;
+  border-color: #e22620 !important ;
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+  font-size: 1rem;
+}
+
+.colbut:hover {
+  background-color: #e22620 !important;
+  color: white !important;
+}
+
+.form-check-input:checked {
+  background-color: #e22620 !important;
+  border-color: #e22620 !important;
+  box-shadow: 0 0 0 0.2rem rgba(241, 48, 48, 0.25) !important;
+}
+
+.form-check-input:focus:not(:checked) {
+  box-shadow: 0 0 0 0.2rem rgba(241, 48, 48, 0.25) !important;
+  border-color: #e22620 !important;
 }
