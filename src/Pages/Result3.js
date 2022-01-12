@@ -4,8 +4,10 @@ import { useContext, useEffect } from "react";
 import { Context } from "..";
 import axios from 'axios';
 import { saveAs } from "file-saver";
+import { useMediaQuery } from "react-responsive";
 
 const Result3 = observer( () => {
+  const mobile = useMediaQuery({ query: "(max-width: 1200px)" });
 
   const {col3} = useContext(Context);
 
@@ -43,7 +45,44 @@ const Result3 = observer( () => {
   return (
     <Container>
         <div className="divCol">
-          <Row style={{marginTop: '0.75rem'}}>
+          {
+            mobile
+            ? <>
+             <Row style={{marginTop: '0.75rem'}}>
+             <Col className="colR" >Самопроиз­вольный выкидыш</Col>
+             <Col className="colR2" >{col3.cols3.c1 || localData.c1}</Col>
+             </Row>
+             <Row>
+             <Col className="colR" >Неразви­вающаяся беремен­ность</Col>
+             <Col className="colR2" >{col3.cols3.c2 || localData.c2}</Col>
+             </Row>
+             <Row>
+             <Col className="colR">Хроническая фетоплацен­тарная недостаточ­ность</Col>
+             <Col className="colR2" >{col3.cols3.c3 || localData.c3}</Col>
+             </Row>
+             <Row>
+             <Col className="colR" >Синдром задержки развития плода</Col>
+             <Col className="colR2" >{col3.cols3.c4 || localData.c4}</Col>
+             </Row>
+             <Row>
+             <Col className="colR" >Угроза прерывания беременности</Col>
+             <Col className="colR2" >{col3.cols3.c5 || localData.c5}</Col>
+             </Row>
+             <Row>
+             <Col className="colR" >Дыхательная недостаточ­ность III ст</Col>
+             <Col className="colR2" >{col3.cols3.c6 || localData.c6}</Col>
+             </Row>
+             <Row>
+             <Col className="colR" >p-вероятность</Col>
+             <Col className="colR2" >{col3.result3 || localData.res}</Col>
+             </Row>
+             <Row>
+             <Col className="colR">Вероятность развития пневмонии</Col>
+             <Col className="colR2" >{col3.word3 || localData.word}</Col>
+             </Row>
+            </>
+            : <>
+            <Row style={{marginTop: '0.75rem'}}>
             <Col className="colR" >Самопроиз­вольный выкидыш</Col>
             <Col className="colR" >Неразви­вающаяся беремен­ность</Col>
             <Col className="colR">Хроническая фетоплацен­тарная недостаточ­ность</Col>
@@ -62,8 +101,9 @@ const Result3 = observer( () => {
             <Col className="colR2" >{col3.cols3.c6 || localData.c6}</Col>
             <Col className="colR2" >{col3.result3 || localData.res}</Col>
             <Col className="colR2" >{col3.word3 || localData.word}</Col>
-
           </Row>
+            </>
+          }
           <div style={{marginTop: '2rem', marginBottom: '1rem'}}>
             <Button onClick={createPdf} className="colLink" variant="outline-danger">Скачать файл</Button>
           </div>
