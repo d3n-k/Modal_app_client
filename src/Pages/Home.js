@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import CardComp from "../components/CardComp";
 import Header from "../components/Header";
-import { TABLE_ROUTE } from "../utils/consts";
+import { TABLE_ROUTE, TABLE_ROUTE_1, TABLE_ROUTE_2, TABLE_ROUTE_3, TABLE_ROUTE_4, TABLE_ROUTE_5 } from "../utils/consts";
 
 function Home() {
 
@@ -15,14 +15,14 @@ function Home() {
           <Container>
           <div style={{ marginTop: "2rem" }} className="cards">
             <Row>
-              <Col>
+              <Col onClick={() => navigate(TABLE_ROUTE_1)}>
                 <CardComp
                   title="Экспресс-метод определения вероятности развития врожденной пневмонии у доношенных новорожденных"
                   name="Горячко А.Н., Сукало А.В., Станкевич О.Б., Самойлович С.В."
                   description="Математическая модель методом многомерного анализа позволяет в течение первых суток жизни без рентгенограммы легких определить доношенных новорожденных в группу высокого риска по развитию врожденной пневмонии."
                 />
               </Col>
-              <Col>
+              <Col onClick={() => navigate(TABLE_ROUTE_2)}>
                 <CardComp
                   title="Прогностическая модель для определения вероятности развития врожденной пневмонии у доношенных новорожденных"
                   name="Горячко А.Н., Сукало А.В., Улезко Е.А., Павлович Т.П."
@@ -31,14 +31,14 @@ function Home() {
               </Col>
             </Row>
             <Row style={{marginTop: '1.5rem'}}>
-              <Col>
+              <Col onClick={() => navigate(TABLE_ROUTE_3)}>
                 <CardComp
                   title="Определение вероятности развития врожденной пневмонии у недоношенных новорожденных с низкой массой тела экспресс-методом"
                   name="Горячко А.Н., Сукало А.В., Рожко Ю.В., Свирская О.Я."
                   description="Математическая модель методом многомерного анализа позволяет в течение первых суток жизни выделить недоношенных новорожденных с низкой массой тела в группу высокого риска по развитию врожденной пневмонии."
                 />
               </Col>
-              <Col>
+              <Col onClick={() => navigate(TABLE_ROUTE_4)}>
                 <CardComp
                   title="Прогностическая модель для определения вероятности развития врожденной пневмонии у недоношенных новорожденных с низкой массой тела"
                   name="Горячко А.Н., Сукало А.В., Улезко Е.А., Павлович Т.П."
@@ -47,7 +47,7 @@ function Home() {
               </Col>
             </Row>
             <Row style={{marginTop: '1.5rem'}}>
-              <Col>
+              <Col onClick={() => navigate(TABLE_ROUTE_5)}>
                 <CardComp
                   title="Модель определения вероятности развития врожденной пневмонии у недоношенных новорожденных с очень низкой и экстремально низкой массой тела"
                   name="Горячко А.Н., Сукало А.В., Улезко Е.А."
