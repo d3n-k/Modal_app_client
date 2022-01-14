@@ -29,9 +29,9 @@ const Result4 = observer(() => {
 
   function createPdf() {
     axios
-      .post("http://localhost:5000/create-pdf4", data)
+      .post(process.env.REACT_APP_HOST + "/create-pdf4", data)
       .then(() =>
-        axios.get("http://localhost:5000/table4", { responseType: "blob" })
+        axios.get(process.env.REACT_APP_HOST + "/table4", { responseType: "blob" })
       )
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: "application/pdf" });

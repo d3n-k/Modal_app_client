@@ -32,9 +32,9 @@ const Result5 = observer(() => {
 
   function createPdf() {
     axios
-      .post("http://localhost:5000/create-pdf5", data)
+      .post(process.env.REACT_APP_HOST + "/create-pdf5", data)
       .then(() =>
-        axios.get("http://localhost:5000/table5", { responseType: "blob" })
+        axios.get(process.env.REACT_APP_HOST + "/table5", { responseType: "blob" })
       )
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: "application/pdf" });
