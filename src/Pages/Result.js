@@ -49,39 +49,39 @@ const Result = observer(() => {
         {mobile ? (
           <>
             <Row style={{ marginTop: "0.75rem" }}>
-              <Col className="colR">АЧТВ</Col>
+              <Col className="colR">Активированное частичное тромбопластиновое время {'(>55,5 с)'}</Col>
               <Col className="colR2">{col.cols.c1 || localData.c1}</Col>
             </Row>
             <Row>
-              <Col className="colR">R</Col>
+              <Col className="colR">Коэффициент R {'(>2,1)'}</Col>
               <Col className="colR2">{col.cols.c2 || localData.c2}</Col>
             </Row>
             <Row>
-              <Col className="colR">ПВ</Col>
+              <Col className="colR">Протромбиновое время {'(>21,8 с)'}</Col>
               <Col className="colR2">{col.cols.c3 || localData.c3}</Col>
             </Row>
             <Row>
-              <Col className="colR">ПИ</Col>
+              <Col className="colR">Протромбиновый индекс по Квику {'(<47,2%)'}</Col>
               <Col className="colR2">{col.cols.c4 || localData.c4}</Col>
             </Row>
             <Row>
-              <Col className="colR">МНО</Col>
+              <Col className="colR">Международное нормализованное отношение {'(>1,9)'}</Col>
               <Col className="colR2">{col.cols.c5 || localData.c5}</Col>
             </Row>
             <Row>
-              <Col className="colR">ТВ</Col>
+              <Col className="colR">Тромбиновое время {'(>27,2 с)'}</Col>
               <Col className="colR2">{col.cols.c6 || localData.c6}</Col>
             </Row>
             <Row>
-              <Col className="colR">фибрино-ген</Col>
+              <Col className="colR">Фибриноген {'(<1,9 г/л)'}</Col>
               <Col className="colR2">{col.cols.c7 || localData.c7}</Col>
             </Row>
             <Row>
-              <Col className="colR">Д-димер</Col>
+              <Col className="colR">D-димер {'(>3,5 мкг/мл)'}</Col>
               <Col className="colR2">{col.cols.c8 || localData.c8}</Col>
             </Row>
             <Row>
-              <Col className="colR">PLT</Col>
+              <Col className="colR">Тромбоциты ({'<150х10'}{<sup><small>9</small></sup>}/л)</Col>
               <Col className="colR2">{col.cols.c9 || localData.c9}</Col>
             </Row>
             <Row>
@@ -96,25 +96,25 @@ const Result = observer(() => {
         ) : (
           <>
             <Row style={{ marginTop: "0.75rem" }}>
-              <Col className="colR" md={1}>
-                АЧТВ
+              <Col md={1} className="colR" >
+              Активиро-ванное частичное тромбопла-стиновое время {'(>55,5 с)'}
               </Col>
-              <Col className="colR" md={1}>
-                R
+              <Col md={1} className="colR" >
+              Коэф-фициент R {'(>2,1)'}
               </Col>
-              <Col className="colR" md={1}>
-                ПВ
+              <Col md={1} className="colR" >
+              Протром-биновое время {'(>21,8 с)'}
               </Col>
-              <Col className="colR" md={1}>
-                ПИ
+              <Col md={1} className="colR" >
+              Протром-биновый индекс по Квику {'(<47,2%)'}
               </Col>
-              <Col className="colR" md={1}>
-                МНО
+              <Col md={1} className="colR" >
+              Междуна-родное нормали-зованное отношение {'(>1,9)'}
               </Col>
-              <Col className="colR">ТВ</Col>
-              <Col className="colR">фибрино-ген</Col>
-              <Col className="colR">Д-димер</Col>
-              <Col className="colR">PLT</Col>
+              <Col md={1} className="colR">Тромби-новое время {'(>27,2 с)'}</Col>
+              <Col className="colR">Фибриноген {'(<1,9 г/л)'}</Col>
+              <Col className="colR">D-димер {'(>3,5 мкг/мл)'}</Col>
+              <Col className="colR">Тромбоциты ({'<150х10'}{<sup><small>9</small></sup>}/л)</Col>
               <Col className="colR">p-вероятность</Col>
               <Col className="colR">Вероятность развития пневмонии</Col>
             </Row>
@@ -134,7 +134,7 @@ const Result = observer(() => {
               <Col className="colR2" md={1}>
                 {col.cols.c5 || localData.c5}
               </Col>
-              <Col className="colR2">{col.cols.c6 || localData.c6}</Col>
+              <Col md={1} className="colR2">{col.cols.c6 || localData.c6}</Col>
               <Col className="colR2">{col.cols.c7 || localData.c7}</Col>
               <Col className="colR2">{col.cols.c8 || localData.c8}</Col>
               <Col className="colR2">{col.cols.c9 || localData.c9}</Col>

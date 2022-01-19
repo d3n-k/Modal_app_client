@@ -59,7 +59,6 @@ function Table() {
 
   useEffect( () => {
     res < 0.293 ?  setWordd('низкая') : setWordd('высокая');
-    console.log(res);
   }, [res])
   
      function result() {
@@ -81,29 +80,14 @@ function Table() {
       <Container>
         <div style={{ padding: "1.25rem" }} className="tableCard">
           <h4>
-            Прогностическая модель для определения вероятности развития
-            геморрагического синдрома у недоношенных новорожденных с врожденной
-            пневмонией
+          Прогностическая модель для определения вероятности развития геморрагического синдрома у недоношенных новорожденных с врожденной пневмонией 
           </h4>
-          <h6 className="fullname">А. Н. Горячко, А. В. Сукало</h6>
+          <h6 className="fullname">Горячко А.Н., Сукало А.В., Улезко Е.А.</h6>
           <div className="descript">
-            Прогностическая модель для определения вероятности развития
-            геморрагического синдрома у недоношенных новорожденных с врожденной
-            пневмонией
+          Прогностическая модель методом многомерного анализа позволяет в течение первых суток жизни, на основании показателей свертывания крови, выделить недоношенных новорожденных с врожденной пневмонией в группу риска по развитию геморрагического синдрома.
           </div>
           <div style={{ marginTop: "1rem" }}>
-            Проведен сравнительный анализ 214 факторов анамнеза жизни, исходов
-            предыдущих беременностей, осложнений настоящей беременности,
-            результатов клинических и лабораторных методов исследования у
-            новорожденных в первые трое суток жизни. В последующем определены
-            наиболее значимые факторы, ассоциированные с развитием врожденной
-            пневмонии у недоношенных новорожденных с очень низкой и экстремально
-            низкой массой тела. На основании бинарной логистической регрессии и
-            ROC-анализа выведена прогностическая модель с чувствительностью,
-            равной 87,6%, и специфичностью – 85,5%, что при пороговых значениях
-            ≥0,73 позволяет отнести недоношенных новорожденных с очень низкой и
-            экстремально низкой массой тела к группе высокого риска по развитию
-            врожденной пневмонии.
+          Проведен сравнительный анализ показателей свертывания крови у 221 недоношенного новорожденного. Путем многомерного анализа выделены прогностические значения показателей коагулограммы недоношенных новорожденных с врожденной пневмонией в первые сутки жизни, ассоциированные с развитием геморрагического синдрома. По результатам ROC-анализа разработана математическая модель с чувствительностью 92,9%, специфичностью 41,8%, что при пороговом значении ≥0,293 позволяет выделить недоношенных новорожденных с врожденной пневмонией в группу риска по развитию геморрагического синдрома.
           </div>
           <div style={{ marginTop: "1rem" }} className="checkboxes">
             <Form >
@@ -112,7 +96,7 @@ function Table() {
                   onChange={() => setCheck1(!check1)}
                   checked={check1}
                   type="checkbox"
-                  label="АЧТВ"
+                  label="Активированное частичное тромбопластиновое время (>55,5 с)"
                 />
               </Form.Group>
               <Form.Group controlId="check2">
@@ -120,7 +104,7 @@ function Table() {
                   onChange={() => setCheck2(!check2)}
                   checked={check2}
                   type="checkbox"
-                  label="R"
+                  label="Коэффициент R (>2,1)"
                 />
               </Form.Group>
               <Form.Group controlId="check3">
@@ -128,7 +112,7 @@ function Table() {
                   onChange={() => setCheck3(!check3)}
                   checked={check3}
                   type="checkbox"
-                  label="ПВ"
+                  label="Протромбиновое время (>21,8 с)"
                 />
               </Form.Group>
               <Form.Group controlId="check4">
@@ -136,7 +120,7 @@ function Table() {
                   onChange={() => setCheck4(!check4)}
                   checked={check4}
                   type="checkbox"
-                  label="ПИ"
+                  label="Протромбиновый индекс по Квику (<47,2%)"
                 />
               </Form.Group>
               <Form.Group controlId="check5">
@@ -144,7 +128,7 @@ function Table() {
                   onChange={() => setCheck5(!check5)}
                   checked={check5}
                   type="checkbox"
-                  label="МНО"
+                  label="Международное нормализованное отношение (>1,9)"
                 />
               </Form.Group>
               <Form.Group controlId="check6">
@@ -152,7 +136,7 @@ function Table() {
                   onChange={() => setCheck6(!check6)}
                   checked={check6}
                   type="checkbox"
-                  label="ТВ"
+                  label="Тромбиновое время (>27,2 с)"
                 />
               </Form.Group>
               <Form.Group controlId="check7">
@@ -160,7 +144,7 @@ function Table() {
                   onChange={() => setCheck7(!check7)}
                   checked={check7}
                   type="checkbox"
-                  label="фибриноген"
+                  label="Фибриноген (<1,9 г/л)"
                 />
               </Form.Group>
               <Form.Group controlId="check8">
@@ -168,16 +152,16 @@ function Table() {
                   onChange={() => setCheck8(!check8)}
                   checked={check8}
                   type="checkbox"
-                  label="Д-димер"
+                  label="D-димер (>3,5 мкг/мл)"
                 />
               </Form.Group>
-              <Form.Group controlId="check9">
+              <Form.Group style={{display: 'flex'}} controlId="check9">
                 <Form.Check
                   onChange={() => setCheck9(!check9)}
                   checked={check9}
                   type="checkbox"
-                  label="PLT"
                 />
+                 <label style={{marginLeft: '10px'}} htmlFor="check9">Тромбоциты ({'<150х10'}{<sup><small>9</small></sup>}/л)</label>
               </Form.Group>
             </Form>
           </div>

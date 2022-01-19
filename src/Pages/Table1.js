@@ -45,7 +45,6 @@ function Table1() {
 
   useEffect( () => {
     res < 0.53 ?  setWordd('низкая') : setWordd('высокая');
-    console.log(res);
   }, [res])
   
      function result() {
@@ -60,7 +59,6 @@ function Table1() {
     navigate(RESULT_ROUTE_1);
     }
   
-    console.log(wordd);
 
   return (
     <div>

@@ -59,13 +59,13 @@ const Result5 = observer(() => {
             </Row>
             <Row>
               <Col className="colR">
-                Гемодинами­ческие нарушения крово­обращения с гипотензией
+                Гемодинами­ческие нарушения крово­обращения с гипотензией, требующей коррекции
               </Col>
               <Col className="colR2">{col5.cols5.c3 || localData.c3}</Col>
             </Row>
             <Row>
               <Col className="colR">
-                {"Лейкопения или лейкоцитоз (<5х10*9/л или >30х10*9/л)"}
+                Лейкопения или лейкоцитоз ({'<5х10'}{<sup><small>9</small></sup>}/л или {'>30х10'}{<sup><small>9</small></sup>}/л)
               </Col>
               <Col className="colR2">{col5.cols5.c4 || localData.c4}</Col>
             </Row>
@@ -74,7 +74,7 @@ const Result5 = observer(() => {
               <Col className="colR2">{col5.cols5.c5 || localData.c5}</Col>
             </Row>
             <Row>
-              <Col className="colR">{"Тромбоци­топения (<150х10*9/л)"}</Col>
+              <Col className="colR">Тромбоци­топения ({'<150х10'}{<sup><small>9</small></sup>}/л)</Col>
               <Col className="colR2">{col5.cols5.c6 || localData.c6}</Col>
             </Row>
             <Row>
@@ -108,13 +108,13 @@ const Result5 = observer(() => {
                 Асфиксия
               </Col>
               <Col className="colR">
-                Гемодинами­ческие нарушения крово­обращения с гипотензией
+                Гемодинами­ческие нарушения крово­обращения с гипотензией, требующей коррекции
               </Col>
               <Col className="colR">
-                {"Лейкопения или лейкоцитоз (<5х10*9/л или >30х10*9/л)"}
+              Лейкопения или лейкоцитоз ({'<5х10'}{<sup><small>9</small></sup>}/л или {'>30х10'}{<sup><small>9</small></sup>}/л)
               </Col>
               <Col className="colR">Изменение объема около­плодных вод</Col>
-              <Col className="colR">{"Тромбоци­топения (<150х10*9/л)"}</Col>
+              <Col className="colR">Тромбоци­топения ({'<150х10'}{<sup><small>9</small></sup>}/л)</Col>
               <Col className="colR">
                 {"Высокий уровень С-реактивного белка(> 6 мг/л)"}
               </Col>
