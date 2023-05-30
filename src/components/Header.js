@@ -1,6 +1,6 @@
 import inst1 from "../instructions/inst1.pdf";
-import inst2 from "../instructions/inst2.doc";
-import inst3 from "../instructions/inst_photo.jpg";
+import inst2 from "../instructions/inst2.pdf";
+//import inst3 from "../instructions/inst_photo.jpg";
 import { Container } from "react-bootstrap";
 
 function Header() {
@@ -28,7 +28,7 @@ function Header() {
                 Инструкция метод определения(pdf)
               </a>
             </div>
-            <div className="link">
+            {/*<div className="link">
               <a target="_blank" href={inst2}>
                 Инструкция метод определения(doc)
               </a>
@@ -37,7 +37,33 @@ function Header() {
               <a style={{ marginLeft: "15%" }} target="_blank" href={inst3}>
                 1-я страница инструкции
               </a>
+            </div>*/}
+          </div>
+        </div>
+        </Container>
+        <Container style={{ marginTop: "2rem" }}>
+        <div className="instr">
+          <div className="inst_title">
+            МЕТОД ОПРЕДЕЛЕНИЯ ВЕРОЯТНОСТИ РАЗВИТИЯ ВРОЖДЕННОЙ ПНЕВМОНИИ У
+            НЕДОНОШЕННЫХ НОВОРОЖДЕННЫХ
+          </div>
+          <div style={{ textAlign: "center" }}>(инструкция по применению)</div>
+          <div className="links">
+            <div className="link">
+              <a target="_blank" href={inst2}>
+                Инструкция метод определения(pdf)
+              </a>
             </div>
+            {/*<div className="link">
+              <a target="_blank" href={inst2_2}>
+                Инструкция метод определения(doc)
+              </a>
+            </div>
+            <div className="link">
+              <a style={{ marginLeft: "15%" }} target="_blank" href={inst2_single}>
+                1-я страница инструкции
+              </a>
+            </div>*/}
           </div>
         </div>
         </Container>
