@@ -84,7 +84,7 @@ body {
 }
 
 .card:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
   z-index: 3;
   /* border-color: #EB6864; */
@@ -162,4 +162,45 @@ body {
 .form-check-input:focus:not(:checked) {
   box-shadow: 0 0 0 0.2rem rgba(241, 48, 48, 0.25) !important;
   border-color: #e22620 !important;
+}
+
+.auth {
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  min-height: 10rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 18px #EB6864;
+  border-radius: 20px;
+}
+
+.auth_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.auth input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  border: 2px solid #e7908d;
+  margin-top: 2rem;
+}
+
+.close_img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
 }

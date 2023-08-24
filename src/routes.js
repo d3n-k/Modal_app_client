@@ -1,4 +1,6 @@
 import Home from "./Pages/Home";
+import Auth from "./Pages/Auth";
+import Edit from "./Pages/Edit";
 import Result from "./Pages/Result";
 import Result1 from "./Pages/Result1";
 import Result2 from "./Pages/Result2";
@@ -11,12 +13,20 @@ import Table2 from "./Pages/Table2";
 import Table3 from "./Pages/Table3";
 import Table4 from "./Pages/Table4";
 import Table5 from "./Pages/Table5";
-import { HOME_ROUTE, RESULT_ROUTE, RESULT_ROUTE_1, RESULT_ROUTE_2, RESULT_ROUTE_3, RESULT_ROUTE_4, RESULT_ROUTE_5, TABLE_ROUTE, TABLE_ROUTE_1, TABLE_ROUTE_2, TABLE_ROUTE_3, TABLE_ROUTE_4, TABLE_ROUTE_5 } from "./utils/consts";
+import { HOME_ROUTE, AUTH_ROUTE, EDIT_ROUTE, RESULT_ROUTE, RESULT_ROUTE_1, RESULT_ROUTE_2, RESULT_ROUTE_3, RESULT_ROUTE_4, RESULT_ROUTE_5, TABLE_ROUTE, TABLE_ROUTE_1, TABLE_ROUTE_2, TABLE_ROUTE_3, TABLE_ROUTE_4, TABLE_ROUTE_5 } from "./utils/consts";
 
 export const routes = [
     {
         path: HOME_ROUTE,
         Component: <Home/>
+    },
+    {
+        path: AUTH_ROUTE,
+        Component: <Auth/>
+    },
+    {
+        path: EDIT_ROUTE,
+        Component: <Edit/>
     },
     {
         path: TABLE_ROUTE,

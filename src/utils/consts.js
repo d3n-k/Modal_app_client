@@ -1,4 +1,6 @@
 export const HOME_ROUTE = '/';
+export const AUTH_ROUTE = '/login';
+export const EDIT_ROUTE = '/edit';
 export const TABLE_ROUTE = '/table';
 export const RESULT_ROUTE = '/result';
 export const TABLE_ROUTE_5 = '/table5';
