@@ -204,3 +204,30 @@ body {
   -webkit-transition: -webkit-transform .8s ease-in-out;
   transition: transform .8s ease-in-out;
 }
+
+.quill.texteditor {
+  width: 60%;
+  font-size: 20px;
+  margin-left: 20%;
+  height: 20rem;
+
+  .ql-toolbar {
+      border-bottom: 2px solid #198754;
+  }
+
+  .ql-container {
+      font-size: 20px;
+      font-family: Roboto;
+      border-left: 2px solid #198754;
+      border-right: 2px solid #198754;
+      border-bottom: 2px solid #198754;
+  }
+
+  font-family: Roboto;
+  margin-top: 0.5rem;
+}
+
+.announ_button {
+  margin-left: calc(50% - 97px/2);
+  margin-top: 5rem;
+}

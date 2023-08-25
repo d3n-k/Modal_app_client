@@ -53,29 +53,13 @@ const Auth = observer(() => {
     }, [loginError, passwordError]);
 
     const auth = async () => {
-        alert("data " + process.env.REACT_APP_HOST + "/login" + "   " + { login: login + "@bsmu.by", password: password });
-        axios.post(process.env.REACT_APP_HOST + "/login", { login: login + "@bsmu.by", password: password })
-            .then((data) =>
-                alert(JSON.stringify(data))
-                //axios.get(process.env.REACT_APP_HOST + "/table6", { responseType: "blob" })
-            ).catch((e) => alert(e));
-        // let data = await loginFunc(login + "@bsmu.by", password);
-        // alert(data);
-        // if (admin.admins.filter((obj) => obj.login.toLowerCase() === login.toLowerCase()).length > 0) {
-        //     try {
-        //         let data;
-
-        //         // data = await loginFunc(login + "@bsmu.by", password);
-
-        //         user.setIsAuth(true);
-        //         user.setUser(data);
-        //         navigate(EDIT_ROUTE);
-        //     } catch (e) {
-        //         alert(e.response.data.message);
-        //     }
-        // } else {
-        //     alert("У вас нет доступа!");
-        // }
+        try {
+            let data = await loginFunc(login + "@bsmu.by", password);
+            alert(data);
+            navigate(EDIT_ROUTE);
+        } catch (e) {
+            alert(JSON.stringify(e));
+        }
     };
 
     return (
