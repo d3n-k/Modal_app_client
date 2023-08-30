@@ -12,11 +12,11 @@ body {
   width: 70%;
   margin-left: 15%;
   padding: 0.5rem 1.5rem;
-    border: 0.125rem solid #EB6864;
-    color: #222;
-    background-color: white;
-    z-index: 3;
-    position: relative;
+  border: 0.125rem solid #EB6864;
+  color: #222;
+  background-color: white;
+  z-index: 3;
+  position: relative;
 }
 
 .h4 {
@@ -46,7 +46,7 @@ body {
   margin-left: calc(50% - 273px/2);
 }
 
-.link a{
+.link a {
   color: #EB6864;
   text-decoration: none;
 }
@@ -59,6 +59,7 @@ body {
 .instr {
   padding: 1.25rem;
   border: 1px solid rgba(0, 0, 0, 0.125);
+  font-family: Arial;
   border-radius: 0.25rem;
   background-color: #fff;
 }
@@ -83,7 +84,7 @@ body {
   z-index: 1;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.05);
   cursor: pointer;
   z-index: 3;
@@ -121,7 +122,7 @@ body {
   background-color: #ebe9e9;
 }
 
-.divCol{
+.divCol {
   padding: 20px;
   background-color: white;
   margin-top: 2rem;
@@ -130,7 +131,7 @@ body {
 .colLink {
   color: #e22620 !important;
   font-weight: 700 !important;
-  border-color: #e22620 !important ;
+  border-color: #e22620 !important;
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
   font-size: 1rem;
 }
@@ -143,7 +144,7 @@ body {
 .colbut {
   background-color: #ec4f49 !important;
   font-weight: 700 !important;
-  border-color: #e22620 !important ;
+  border-color: #e22620 !important;
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
   font-size: 1rem;
 }
@@ -210,24 +211,81 @@ body {
   font-size: 20px;
   margin-left: 20%;
   height: 20rem;
+  text-decoration: none;
 
   .ql-toolbar {
-      border-bottom: 2px solid #198754;
+    border-bottom: 2px solid #e7908d;
+    background-color: white;
+    text-decoration: none;
   }
 
   .ql-container {
-      font-size: 20px;
-      font-family: Roboto;
-      border-left: 2px solid #198754;
-      border-right: 2px solid #198754;
-      border-bottom: 2px solid #198754;
+    font-size: 25px;
+    font-family: Roboto;
+    background-color: white;
+    text-decoration: none;
+    border-left: 2px solid #e7908d;
+    border-right: 2px solid #e7908d;
+    border-bottom: 2px solid #e7908d;
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Roboto"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Roboto"]::before {
+    font-family: "Roboto";
+    content: "Roboto";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Raleway"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Raleway"]::before {
+    font-family: "Raleway", cursive;
+    content: "Raleway";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Arial"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Arial"]::before {
+    font-family: "Arial", sans-serif;
+    content: "Arial";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    font-family: "Times New Roman", Times, serif;
+    content: "Times New Roman";
   }
 
   font-family: Roboto;
-  margin-top: 0.5rem;
 }
+
+.ql-font-Raleway {
+    font-family: "Raleway", cursive;
+  }
+
+  .ql-font-Roboto {
+    font-family: "Roboto";
+  }
+
+  .ql-font-Arial {
+    font-family: "Arial", sans-serif;
+  }
+
+  .ql-font-Times {
+    font-family: "Times New Roman", Times, serif;
+  }
 
 .announ_button {
   margin-left: calc(50% - 97px/2);
-  margin-top: 5rem;
+  margin-top: 6rem;
+}
+
+.announce_tabs {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 2rem;
+  font-family: Roboto;
+  color: #e22620;
+}
+
+.nav-tabs .nav-link {
+  color: black !important;
+  font-size: 1.2rem;
 }

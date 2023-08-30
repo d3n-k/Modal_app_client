@@ -2,6 +2,7 @@ import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import UserStore from './store/UserStore';
 import reportWebVitals from './reportWebVitals';
 import resultStore from './store/resultStore';
 import result5Store from './store/result5Store';
@@ -14,6 +15,7 @@ export const Context = createContext(null);
 
 ReactDOM.render(
   <Context.Provider value={{
+    user: new UserStore(),
     col: new resultStore(),
     col5: new result5Store(),
     col1: new result1Store(),
