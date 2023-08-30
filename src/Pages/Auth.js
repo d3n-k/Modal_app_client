@@ -1,66 +1,59 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { Context } from '../index';
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
 import { useNavigate } from "react-router-dom";
-import { EDIT_ROUTE, HOME_ROUTE } from "../utils/consts";
+import { ANNOUNCE_ROUTE, HOME_ROUTE } from "../utils/consts";
 import { loginFunc } from "../http/UserApi";
-import axios from "axios";
 import close from './../pics/close.svg'
 
 const Auth = observer(() => {
-    const [login, setLogin] = useState("");
-    const [password, setPassword] = useState("");
+    const { user } = useContext(Context);
 
-    const [loginEmpty, setLoginEmpty] = useState(false);
-    const [passwordEmpty, setPasswordEmpty] = useState(false);
+    const [login, setLogin] = useState(null);
+    const [password, setPassword] = useState(null);
+
     const [formValid, setFormValid] = useState(false);
 
-    const [loginError, setLoginError] = useState("Заполните это поле!");
-    const [passwordError, setPasswordError] = useState("Заполните это поле!");
+    const [loginError, setLoginError] = useState(false);
+    const [passwordError, setPasswordError] = useState(false);
 
     const navigate = useNavigate();
 
     const blurHandler = (e) => {
-        switch (e.target.name) {
-            case "login":
-                setLoginEmpty(true);
-                break;
-            case "password":
-                setPasswordEmpty(true);
-                break;
+        if (!e.target.value) {
+            switch (e.target.name) {
+                case "login":
+                    setLoginError(true);
+                    break;
+                case "password":
+                    setPasswordError(true);
+                    break;
+            }
         }
     };
 
     useEffect(() => {
-        if (!login) {
-            setLoginError("Заполните это поле!");
-        } else {
-            setLoginError("");
-        }
-        if (!password) {
-            setPasswordError("Заполните это поле!");
-        } else {
-            setPasswordError("");
-        }
+        setLoginError(login === "");
+        setPasswordError(password === "");
     }, [login, password]);
 
     useEffect(() => {
-        if (loginError || passwordError) {
-            setFormValid(false);
-        } else {
-            setFormValid(true);
-        }
+        setFormValid(!(loginError || passwordError));
     }, [loginError, passwordError]);
 
     const auth = async () => {
         try {
             let data = await loginFunc(login + "@bsmu.by", password);
-            alert(data);
-            navigate(EDIT_ROUTE);
+            user.setIsAuth(true);
+            navigate(ANNOUNCE_ROUTE);
         } catch (e) {
+            user.setIsAuth(false);
             alert(JSON.stringify(e));
         }
     };
+
+    const errorText = "Заполните это поле!";
 
     return (
         <div
@@ -86,8 +79,8 @@ const Auth = observer(() => {
                     type="text"
                     placeholder="Введите логин..."
                 />
-                {loginEmpty && loginError && (
-                    <div style={{ color: "red", marginBottom: "-1.5rem" }}>{loginError}</div>
+                {loginError && (
+                    <div style={{ color: "red", marginBottom: "-1.5rem" }}>{errorText}</div>
                 )}
                 <input
                     onBlur={(e) => blurHandler(e)}
@@ -97,8 +90,8 @@ const Auth = observer(() => {
                     type="password"
                     placeholder="Введите пароль..."
                 />
-                {passwordEmpty && passwordError && (
-                    <div style={{ color: "red", marginBottom: "-1.5rem" }}>{passwordError}</div>
+                {passwordError && (
+                    <div style={{ color: "red", marginBottom: "-1.5rem" }}>{errorText}</div>
                 )}
 
                 <Button
