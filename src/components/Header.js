@@ -1,6 +1,3 @@
-import inst1 from "../instructions/inst1.pdf";
-import inst2 from "../instructions/inst2.pdf";
-//import inst3 from "../instructions/inst_photo.jpg";
 import { Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
@@ -43,38 +40,6 @@ function Header() {
             </Container>
         })}
       </div>
-      {/* <Container style={{ marginTop: "4rem" }}>
-        <div className="instr">
-          <div className="inst_title">
-            МЕТОД ОПРЕДЕЛЕНИЯ ВЕРОЯТНОСТИ РАЗВИТИЯ ВРОЖДЕННОЙ ПНЕВМОНИИ У
-            ДОНОШЕННЫХ НОВОРОЖДЕННЫХ
-          </div>
-          <div style={{ textAlign: "center" }}>(инструкция по применению)</div>
-          <div className="links">
-            <div className="link">
-              <a target="_blank" href={inst1}>
-                Инструкция метод определения(pdf)
-              </a>
-            </div>
-          </div>
-        </div>
-      </Container>
-      <Container style={{ marginTop: "2rem" }}>
-        <div className="instr">
-          <div className="inst_title">
-            МЕТОД ОПРЕДЕЛЕНИЯ ВЕРОЯТНОСТИ РАЗВИТИЯ ВРОЖДЕННОЙ ПНЕВМОНИИ У
-            НЕДОНОШЕННЫХ НОВОРОЖДЕННЫХ
-          </div>
-          <div style={{ textAlign: "center" }}>(инструкция по применению)</div>
-          <div className="links">
-            <div className="link">
-              <a target="_blank" href={inst2}>
-                Инструкция метод определения(pdf)
-              </a>
-            </div>
-          </div>
-        </div>
-      </Container> */}
     </header>
   );
 }

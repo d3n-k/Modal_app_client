@@ -25,7 +25,7 @@ const Announce = observer(() => {
     const [filesList, setFileList] = useState(null);
     const inputRef = useRef(null);
 
-    const maxNameLength = 15;
+    const maxNameLength = 17;
 
     useEffect(() => {
         updateFilesList();
