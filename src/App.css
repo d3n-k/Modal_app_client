@@ -206,8 +206,39 @@ body {
   transition: transform .8s ease-in-out;
 }
 
+.autocomplete {
+  margin-top: 2.8rem;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  border: 2px solid #e7908d;
+  font-size: 16px;
+  height: 25rem;
+  overflow: auto;
+}
+
+.autocomplete_item {
+  padding: 10px;
+}
+
+.autocomplete_item:hover {
+  background-color: rgb(218, 218, 218);
+  cursor: pointer;
+}
+
+.divCross {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.cross {
+  cursor: pointer;
+  width: 15px;
+}
+
 .quill.texteditor {
-  width: 60%;
   font-size: 20px;
   margin-left: 20%;
   height: 20rem;
@@ -227,6 +258,18 @@ body {
     border-left: 2px solid #e7908d;
     border-right: 2px solid #e7908d;
     border-bottom: 2px solid #e7908d;
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Helvetica"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Helvetica"]::before {
+    font-family: "Helvetica Nueue";
+    content: "Helvetica Nueue";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Segoe"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Segoe"]::before {
+    font-family: "Segoe UI";
+    content: "Segoe UI";
   }
 
   .ql-picker.ql-font .ql-picker-label[data-value="Roboto"]::before,
@@ -253,34 +296,57 @@ body {
     content: "Times New Roman";
   }
 
+  .ql-picker.ql-font .ql-picker-label[data-value="cycle"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="cycle"]::before {
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    content: "News Cycle";
+  }
+
   font-family: Roboto;
 }
 
+.ql-font-Helvetica {
+  font-family: "Helvetica Neue";
+}
+
+.ql-font-Segoe {
+  font-family: "Segoe UI";
+}
+
 .ql-font-Raleway {
-    font-family: "Raleway", cursive;
-  }
+  font-family: "Raleway", cursive;
+}
 
-  .ql-font-Roboto {
-    font-family: "Roboto";
-  }
+.ql-font-Roboto {
+  font-family: "Roboto";
+}
 
-  .ql-font-Arial {
-    font-family: "Arial", sans-serif;
-  }
+.ql-font-Arial {
+  font-family: "Arial", sans-serif;
+}
 
-  .ql-font-Times {
-    font-family: "Times New Roman", Times, serif;
-  }
+.ql-font-Times {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.ql-font-Cycle {
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+}
 
 .announ_button {
   margin-left: calc(50% - 97px/2);
   margin-top: 6rem;
 }
 
+.announ_div {
+  margin-left: 48%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
 .announce_tabs {
-  width: 60%;
   margin-left: 20%;
-  margin-top: 2rem;
   font-family: Roboto;
   color: #e22620;
 }
