@@ -42,7 +42,7 @@ function Table4() {
   useEffect( () => {
     const z = -1.82+1.6*c1+2.8*c2+1.49*c3+2.61*c4+2.62*c5        
     const p = Math.exp(z) / (1 + Math.exp(z));
-    const num = (Number(p.toFixed(4)));
+    const num = p.toFixed(3);
     setRes(num);
   }, [c1, c2, c3, c4, c5])
 

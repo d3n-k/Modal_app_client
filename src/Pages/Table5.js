@@ -54,7 +54,7 @@ function Table5() {
       0.74 * c7 +
       0.48 * c8;
     const p = Math.exp(z) / (1 + Math.exp(z));
-    const num = Number(p.toFixed(4));
+    const num = p.toFixed(3);
     setRes(num);
   }, [c1, c2, c3, c4, c5, c6, c7, c8]);
 
@@ -163,7 +163,7 @@ function Table5() {
                   onChange={() => setCheck7(!check7)}
                   checked={check7}
                   type="checkbox"
-                  label="Высокий уровень С-реактивного белка (> 6 мг/л или выше нормативного значения)"
+                  label="С-реактивный белок (> 6 мг/л или выше нормативного значения)"
                 />
               </Form.Group>
               <Form.Group controlId="check8">
