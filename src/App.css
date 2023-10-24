@@ -12,11 +12,11 @@ body {
   width: 70%;
   margin-left: 15%;
   padding: 0.5rem 1.5rem;
-    border: 0.125rem solid #EB6864;
-    color: #222;
-    background-color: white;
-    z-index: 3;
-    position: relative;
+  border: 0.125rem solid #EB6864;
+  color: #222;
+  background-color: white;
+  z-index: 3;
+  position: relative;
 }
 
 .h4 {
@@ -46,7 +46,7 @@ body {
   margin-left: calc(50% - 273px/2);
 }
 
-.link a{
+.link a {
   color: #EB6864;
   text-decoration: none;
 }
@@ -59,6 +59,7 @@ body {
 .instr {
   padding: 1.25rem;
   border: 1px solid rgba(0, 0, 0, 0.125);
+  font-family: Arial;
   border-radius: 0.25rem;
   background-color: #fff;
 }
@@ -83,8 +84,8 @@ body {
   z-index: 1;
 }
 
-.card:hover{
-  transform: scale(1.1);
+.card:hover {
+  transform: scale(1.05);
   cursor: pointer;
   z-index: 3;
   /* border-color: #EB6864; */
@@ -121,7 +122,7 @@ body {
   background-color: #ebe9e9;
 }
 
-.divCol{
+.divCol {
   padding: 20px;
   background-color: white;
   margin-top: 2rem;
@@ -130,7 +131,7 @@ body {
 .colLink {
   color: #e22620 !important;
   font-weight: 700 !important;
-  border-color: #e22620 !important ;
+  border-color: #e22620 !important;
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
   font-size: 1rem;
 }
@@ -143,7 +144,7 @@ body {
 .colbut {
   background-color: #ec4f49 !important;
   font-weight: 700 !important;
-  border-color: #e22620 !important ;
+  border-color: #e22620 !important;
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
   font-size: 1rem;
 }
@@ -162,4 +163,195 @@ body {
 .form-check-input:focus:not(:checked) {
   box-shadow: 0 0 0 0.2rem rgba(241, 48, 48, 0.25) !important;
   border-color: #e22620 !important;
+}
+
+.auth {
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  min-height: 10rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 18px #EB6864;
+  border-radius: 20px;
+}
+
+.auth_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.auth input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  border: 2px solid #e7908d;
+  margin-top: 2rem;
+}
+
+.close_img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+
+.autocomplete {
+  margin-top: 2.8rem;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  border: 2px solid #e7908d;
+  font-size: 16px;
+  height: 25rem;
+  overflow: auto;
+}
+
+.autocomplete_item {
+  padding: 10px;
+}
+
+.autocomplete_item:hover {
+  background-color: rgb(218, 218, 218);
+  cursor: pointer;
+}
+
+.divCross {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.cross {
+  cursor: pointer;
+  width: 15px;
+}
+
+.quill.texteditor {
+  font-size: 20px;
+  margin-left: 20%;
+  height: 20rem;
+  text-decoration: none;
+
+  .ql-toolbar {
+    border-bottom: 2px solid #e7908d;
+    background-color: white;
+    text-decoration: none;
+  }
+
+  .ql-container {
+    font-size: 25px;
+    font-family: Roboto;
+    background-color: white;
+    text-decoration: none;
+    border-left: 2px solid #e7908d;
+    border-right: 2px solid #e7908d;
+    border-bottom: 2px solid #e7908d;
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Helvetica"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Helvetica"]::before {
+    font-family: "Helvetica Nueue";
+    content: "Helvetica Nueue";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Segoe"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Segoe"]::before {
+    font-family: "Segoe UI";
+    content: "Segoe UI";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Roboto"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Roboto"]::before {
+    font-family: "Roboto";
+    content: "Roboto";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Raleway"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Raleway"]::before {
+    font-family: "Raleway", cursive;
+    content: "Raleway";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="Arial"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="Arial"]::before {
+    font-family: "Arial", sans-serif;
+    content: "Arial";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="times"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="times"]::before {
+    font-family: "Times New Roman", Times, serif;
+    content: "Times New Roman";
+  }
+
+  .ql-picker.ql-font .ql-picker-label[data-value="cycle"]::before,
+  .ql-picker.ql-font .ql-picker-item[data-value="cycle"]::before {
+    font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+    content: "News Cycle";
+  }
+
+  font-family: Roboto;
+}
+
+.ql-font-Helvetica {
+  font-family: "Helvetica Neue";
+}
+
+.ql-font-Segoe {
+  font-family: "Segoe UI";
+}
+
+.ql-font-Raleway {
+  font-family: "Raleway", cursive;
+}
+
+.ql-font-Roboto {
+  font-family: "Roboto";
+}
+
+.ql-font-Arial {
+  font-family: "Arial", sans-serif;
+}
+
+.ql-font-Times {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.ql-font-Cycle {
+  font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
+}
+
+.announ_button {
+  margin-left: calc(50% - 97px/2);
+  margin-top: 6rem;
+}
+
+.announ_div {
+  margin-left: 48%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.announce_tabs {
+  margin-left: 20%;
+  font-family: Roboto;
+  color: #e22620;
+}
+
+.nav-tabs .nav-link {
+  color: black !important;
+  font-size: 1.2rem;
 }

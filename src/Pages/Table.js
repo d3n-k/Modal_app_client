@@ -7,7 +7,7 @@ import { RESULT_ROUTE } from "../utils/consts";
 
 function Table() {
 
-  const {col} = useContext(Context);
+  const { col } = useContext(Context);
 
 
   const [check1, setCheck1] = useState(false);
@@ -34,7 +34,7 @@ function Table() {
   const [c7, setC7] = useState(0);
   const [c8, setC8] = useState(0);
   const [c9, setC9] = useState(0);
-  
+
   useEffect(() => {
 
     check1 ? (setC1(1)) : (setC1(0));
@@ -50,29 +50,29 @@ function Table() {
   }, [check1, check2, check3, check4, check5, check6, check7, check8, check9]);
 
 
-  useEffect( () => {
-    const z = -1.01+0.46*c1-0.33*c2+0.26*c3+0.3*c4-0.13*c5+0.25*c6+0.14*c7+0.8*c8+0.92*c9;                
+  useEffect(() => {
+    const z = -1.01 + 0.46 * c1 - 0.33 * c2 + 0.26 * c3 + 0.3 * c4 - 0.13 * c5 + 0.25 * c6 + 0.14 * c7 + 0.8 * c8 + 0.92 * c9;
     const p = Math.exp(z) / (1 + Math.exp(z));
-    const num = (Number(p.toFixed(4)));
+    const num = p.toFixed(3);
     setRes(num);
   }, [c1, c2, c3, c4, c5, c6, c7, c8, c9])
 
-  useEffect( () => {
-    res < 0.293 ?  setWordd('низкая') : setWordd('высокая');
+  useEffect(() => {
+    res < 0.293 ? setWordd('низкая') : setWordd('высокая');
   }, [res])
-  
-     function result() {
-     const data = {c1, c2, c3, c4, c5, c6, c7, c8, c9, res, word: wordd}
-  
-     col.setResult(res);
-     col.setWord(wordd);
-     col.setCols( {c1, c2, c3, c4, c5, c6, c7, c8, c9} );
 
-     localStorage.setItem('data', JSON.stringify(data));
+  function result() {
+    const data = { c1, c2, c3, c4, c5, c6, c7, c8, c9, res, word: wordd }
+
+    col.setResult(res);
+    col.setWord(wordd);
+    col.setCols({ c1, c2, c3, c4, c5, c6, c7, c8, c9 });
+
+    localStorage.setItem('data', JSON.stringify(data));
 
     navigate(RESULT_ROUTE);
-    }
-  
+  }
+
 
   return (
     <div>
@@ -80,19 +80,19 @@ function Table() {
       <Container>
         <div style={{ padding: "1.25rem" }} className="tableCard">
           <h4>
-          Прогностическая модель для определения вероятности развития геморрагического синдрома у недоношенных новорожденных с врожденной пневмонией 
+            Прогностическая модель для определения вероятности развития геморрагического синдрома у недоношенных новорожденных с врожденной пневмонией
           </h4>
           <h6 className="fullname">Горячко А.Н., Сукало А.В., Улезко Е.А.</h6>
           <div className="descript">
-          Прогностическая модель методом многомерного анализа позволяет в течение первых суток жизни, на основании показателей свертывания крови, выделить недоношенных новорожденных с врожденной пневмонией в группу риска по развитию геморрагического синдрома.
+            Прогностическая модель методом многомерного анализа позволяет в течение первых суток жизни, на основании показателей свертывания крови, выделить недоношенных новорожденных с врожденной пневмонией в группу риска по развитию геморрагического синдрома.
           </div>
           <div style={{ marginTop: "1rem" }}>
-          Проведен сравнительный анализ показателей свертывания крови у 221 недоношенного новорожденного. Путем многомерного анализа выделены прогностические значения показателей коагулограммы недоношенных новорожденных с врожденной пневмонией в первые сутки жизни, ассоциированные с развитием геморрагического синдрома. По результатам ROC-анализа разработана математическая модель с чувствительностью 92,9%, специфичностью 41,8%, что при пороговом значении ≥0,293 позволяет выделить недоношенных новорожденных с врожденной пневмонией в группу риска по развитию геморрагического синдрома.
+            Проведен сравнительный анализ показателей свертывания крови у 221 недоношенного новорожденного. Путем многомерного анализа выделены прогностические значения показателей коагулограммы недоношенных новорожденных с врожденной пневмонией в первые сутки жизни, ассоциированные с развитием геморрагического синдрома. По результатам ROC-анализа разработана математическая модель с чувствительностью 92,9%, специфичностью 41,8%, что при пороговом значении ≥0,293 позволяет выделить недоношенных новорожденных с врожденной пневмонией в группу риска по развитию геморрагического синдрома.
           </div>
           <div style={{ marginTop: "1rem" }} className="checkboxes">
             <Form >
               <Form.Group controlId="check1">
-                <Form.Check 
+                <Form.Check
                   onChange={() => setCheck1(!check1)}
                   checked={check1}
                   type="checkbox"
@@ -155,13 +155,13 @@ function Table() {
                   label="D-димер (>3,5 мкг/мл)"
                 />
               </Form.Group>
-              <Form.Group style={{display: 'flex'}} controlId="check9">
+              <Form.Group style={{ display: 'flex' }} controlId="check9">
                 <Form.Check
                   onChange={() => setCheck9(!check9)}
                   checked={check9}
                   type="checkbox"
                 />
-                 <label style={{marginLeft: '10px'}} htmlFor="check9">Тромбоциты ({'<150х10'}{<sup><small>9</small></sup>}/л)</label>
+                <label style={{ marginLeft: '10px' }} htmlFor="check9">Тромбоциты ({'<150х10'}{<sup><small>9</small></sup>}/л)</label>
               </Form.Group>
             </Form>
           </div>

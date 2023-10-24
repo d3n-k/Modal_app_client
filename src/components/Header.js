@@ -1,12 +1,27 @@
-import inst1 from "../instructions/inst1.pdf";
-import inst2 from "../instructions/inst2.pdf";
-//import inst3 from "../instructions/inst_photo.jpg";
 import { Container } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import "react-quill/dist/quill.snow.css";
+import rehypeRaw from 'rehype-raw'
+import { getAnnounce } from "../http/AnnounceApi";
 
 function Header() {
-    return (
-      <header>
-          <Container>
+
+  const [announces, setAnnounces] = useState(["", ""]);
+
+  useEffect(() => {
+    for (let i = 0; i < announces.length; i++)
+      getAnnounce(i).then((data) => {
+        setAnnounces((oldArray) => {
+          oldArray[i] = data.data;
+          return [...oldArray];
+        })
+      });
+  }, [])
+
+  return (
+    <header>
+      <Container>
         <div className="title">
           <h4 className="h4">
             ДИАГНОСТИКА ВРОЖДЕННОЙ ПНЕВМОНИИ У НОВОРОЖДЕННЫХ С ПОМОЩЬЮ
@@ -15,61 +30,18 @@ function Header() {
         </div>
       </Container>
       <div className="hr"></div>
-      <Container style={{ marginTop: "4rem" }}>
-        <div className="instr">
-          <div className="inst_title">
-            МЕТОД ОПРЕДЕЛЕНИЯ ВЕРОЯТНОСТИ РАЗВИТИЯ ВРОЖДЕННОЙ ПНЕВМОНИИ У
-            ДОНОШЕННЫХ НОВОРОЖДЕННЫХ
-          </div>
-          <div style={{ textAlign: "center" }}>(инструкция по применению)</div>
-          <div className="links">
-            <div className="link">
-              <a target="_blank" href={inst1}>
-                Инструкция метод определения(pdf)
-              </a>
-            </div>
-            {/*<div className="link">
-              <a target="_blank" href={inst2}>
-                Инструкция метод определения(doc)
-              </a>
-            </div>
-            <div className="link">
-              <a style={{ marginLeft: "15%" }} target="_blank" href={inst3}>
-                1-я страница инструкции
-              </a>
-            </div>*/}
-          </div>
-        </div>
-        </Container>
-        <Container style={{ marginTop: "2rem" }}>
-        <div className="instr">
-          <div className="inst_title">
-            МЕТОД ОПРЕДЕЛЕНИЯ ВЕРОЯТНОСТИ РАЗВИТИЯ ВРОЖДЕННОЙ ПНЕВМОНИИ У
-            НЕДОНОШЕННЫХ НОВОРОЖДЕННЫХ
-          </div>
-          <div style={{ textAlign: "center" }}>(инструкция по применению)</div>
-          <div className="links">
-            <div className="link">
-              <a target="_blank" href={inst2}>
-                Инструкция метод определения(pdf)
-              </a>
-            </div>
-            {/*<div className="link">
-              <a target="_blank" href={inst2_2}>
-                Инструкция метод определения(doc)
-              </a>
-            </div>
-            <div className="link">
-              <a style={{ marginLeft: "15%" }} target="_blank" href={inst2_single}>
-                1-я страница инструкции
-              </a>
-            </div>*/}
-          </div>
-        </div>
-        </Container>
-      </header>
-    );
-  }
-  
-  export default Header;
-  
+      <div style={{ marginTop: "4rem" }}>
+        {announces.map((element, index) => {
+          if (element !== "")
+            return <Container style={{ marginTop: "2rem" }}>
+              <div className="ql-editor" style={{ backgroundColor: "white", textDecoration: "none", fontSize: "20px", fontFamily: "Roboto", borderRadius: "0.25rem", border: "1px solid rgba(0, 0, 0, 0.125)", padding: "1.25rem" }}>
+                <ReactMarkdown children={element} rehypePlugins={[rehypeRaw]} />
+              </div>
+            </Container>
+        })}
+      </div>
+    </header>
+  );
+}
+
+export default Header;
