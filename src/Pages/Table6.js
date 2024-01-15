@@ -73,7 +73,7 @@ function Table6() {
                                     checked={c2}
                                     type="checkbox"
                                 />
-                                <label style={{ marginLeft: '10px' }} htmlFor="check2">Лейкопения ({'>5×10'}{<sup><small>9</small></sup>}/л) или лейкоцитоз (на 1–2-е сутки жизни {'>30×10'}{<sup><small>9</small></sup>}/л, на 5–7-е сутки жизни {'>20×10'}{<sup><small>9</small></sup>}/л, после 7-х суток жизни {'>17×10'}{<sup><small>9</small></sup>}/л)</label>
+                                <label style={{ marginLeft: '10px' }} htmlFor="check2">Лейкопения ({'<5×10'}{<sup><small>9</small></sup>}/л) или лейкоцитоз (на 1–2-е сутки жизни {'>30×10'}{<sup><small>9</small></sup>}/л, на 5–7-е сутки жизни {'>20×10'}{<sup><small>9</small></sup>}/л, после 7-х суток жизни {'>17×10'}{<sup><small>9</small></sup>}/л)</label>
                             </Form.Group>
                             <Form.Group controlId="check3">
                                 <Form.Check
